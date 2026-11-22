@@ -1,0 +1,180 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#050505">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="description" content="Amaka AI: an African-inspired digital companion.">
+<title>Amaka AI</title>
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="icon-192.png">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<main id="stage">
+<svg id="face" viewBox="0 0 400 780" preserveAspectRatio="xMidYMid meet" role="img" aria-label="Amaka's animated face">
+  <defs>
+    <radialGradient id="halo" cx="50%" cy="50%" r="50%">
+      <stop offset="0" stop-color="#f0a64a" stop-opacity=".6"/>
+      <stop offset="1" stop-color="#f0a64a" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="skin" cx="50%" cy="38%" r="70%">
+      <stop offset="0" stop-color="#2b2521"/>
+      <stop offset=".65" stop-color="#171412"/>
+      <stop offset="1" stop-color="#0a0908"/>
+    </radialGradient>
+    <radialGradient id="iris" cx="50%" cy="45%" r="55%">
+      <stop offset="0" stop-color="#ffe3a3"/>
+      <stop offset=".45" stop-color="#e2a550"/>
+      <stop offset="1" stop-color="#8a4a22"/>
+    </radialGradient>
+    <linearGradient id="bronze" gradientUnits="userSpaceOnUse" x1="0" y1="60" x2="0" y2="650">
+      <stop offset="0" stop-color="#e0bb70"/>
+      <stop offset="1" stop-color="#8d5a2b"/>
+    </linearGradient>
+    <clipPath id="eyeClip"><path id="eyeClipPath" d="M-46 0Q0 -60 46 0Q0 48 -46 0Z"/></clipPath>
+    <path id="mask" d="M200 50C95 50 62 170 70 330C76 470 130 590 200 650C270 590 324 470 330 330C338 170 305 50 200 50Z"/>
+    <g id="half">
+      <path d="M200 74L186 104L172 82L158 112L144 92L130 120"/>
+      <path d="M176 158H118"/><circle cx="108" cy="158" r="3" fill="#a8743a" stroke="none"/>
+      <path d="M76 200L104 226L76 252"/>
+      <path d="M82 352L118 384L82 416"/><path d="M82 376L100 384L82 392"/>
+      <path d="M92 322Q134 340 176 322" stroke-width="1.5"/>
+      <circle cx="100" cy="450" r="2.5" fill="#a8743a" stroke="none"/>
+      <circle cx="114" cy="480" r="2.5" fill="#a8743a" stroke="none"/>
+      <circle cx="130" cy="508" r="2.5" fill="#a8743a" stroke="none"/>
+      <circle cx="150" cy="534" r="2.5" fill="#a8743a" stroke="none"/>
+    </g>
+  </defs>
+
+  <circle id="halo" cx="200" cy="320" r="360" fill="url(#halo)" opacity=".4"/>
+  <use href="#mask" fill="url(#skin)"/>
+  <ellipse id="faceGlow" cx="200" cy="290" rx="160" ry="130" fill="url(#halo)" opacity=".3"/>
+
+  <g id="orn" fill="none" stroke="url(#bronze)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <use href="#mask" stroke-width="3.5"/>
+    <use href="#mask" stroke-width="3.5" stroke-dasharray="0.1 9" opacity=".7" transform="translate(200 350) scale(.93) translate(-200 -350)"/>
+    <use href="#half"/>
+    <use href="#half" transform="translate(400 0) scale(-1 1)"/>
+    <path d="M200 128L226 160L200 192L174 160Z"/>
+    <path d="M200 144L212 160L200 176L188 160Z"/>
+    <circle cx="200" cy="160" r="3" fill="#c2703d" stroke="none"/>
+    <path d="M200 200V236"/>
+    <path d="M200 330V430"/>
+    <path d="M176 450L200 478L224 450"/>
+    <circle cx="200" cy="500" r="3" fill="#c2703d" stroke="none"/>
+    <path d="M166 566L200 534L234 566"/>
+    <path d="M180 592L200 572L220 592"/>
+  </g>
+
+  <path id="browL" d="M-52 4Q0 -14 52 -4" fill="none" stroke="#c9964f" stroke-width="6" stroke-linecap="round" transform="translate(134 218)"/>
+  <path id="browR" d="M-52 -4Q0 -14 52 4" fill="none" stroke="#c9964f" stroke-width="6" stroke-linecap="round" transform="translate(266 218)"/>
+
+  <g id="eyeL" transform="translate(134 270)">
+    <g clip-path="url(#eyeClip)">
+      <rect x="-60" y="-50" width="120" height="100" fill="#0d0b0a"/>
+      <g class="iris">
+        <circle r="31" fill="url(#iris)"/>
+        <circle class="pupil" r="12" fill="#120c08"/>
+        <circle cx="-9" cy="-10" r="4" fill="#fff" opacity=".8"/>
+      </g>
+    </g>
+    <path class="outline" fill="none" stroke="#c9964f" stroke-width="3.5" stroke-linejoin="round"/>
+  </g>
+  <g id="eyeR" transform="translate(266 270)">
+    <g clip-path="url(#eyeClip)">
+      <rect x="-60" y="-50" width="120" height="100" fill="#0d0b0a"/>
+      <g class="iris">
+        <circle r="31" fill="url(#iris)"/>
+        <circle class="pupil" r="12" fill="#120c08"/>
+        <circle cx="-9" cy="-10" r="4" fill="#fff" opacity=".8"/>
+      </g>
+    </g>
+    <path class="outline" fill="none" stroke="#c9964f" stroke-width="3.5" stroke-linejoin="round"/>
+  </g>
+</svg>
+</main>
+
+<header class="top">
+  <div class="brand"><span class="word">Amaka</span><span id="stateLabel" class="state">Idle</span></div>
+  <button id="menuBtn" class="iconbtn" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="panel">
+    <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h10"/></svg>
+  </button>
+</header>
+
+<ol id="log" class="log" aria-live="polite"></ol>
+
+<form id="composer" class="dock" autocomplete="off">
+  <input id="msg" type="text" enterkeyhint="send" placeholder="Type a message" aria-label="Message" maxlength="500">
+  <button id="micBtn" class="mic" type="button" aria-label="Speak to Amaka" aria-pressed="false">
+    <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><rect x="9" y="3" width="6" height="12" rx="3"/><path d="M5 11a7 7 0 0 0 14 0M12 18v3"/></svg>
+  </button>
+  <button class="send" type="submit">Send</button>
+</form>
+
+<div id="scrim" class="scrim"></div>
+<aside id="panel" class="panel" aria-hidden="true" aria-label="Menu">
+  <div class="panel-head">
+    <h1>Amaka AI 0.1</h1>
+    <button id="closeBtn" class="iconbtn" type="button" aria-label="Close menu">
+      <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg>
+    </button>
+  </div>
+
+  <section>
+    <h2>Expressions</h2>
+    <p class="hint">Tap one to hold it. Tap Idle to go back to normal.</p>
+    <div id="chips" class="chips"></div>
+  </section>
+
+  <section>
+    <h2>Settings</h2>
+    <label class="row"><span>Glow brightness</span><input id="setGlow" type="range" min="50" max="130" step="5"></label>
+    <label class="row"><span>Reduce motion</span><input id="setReduce" class="switch" type="checkbox"></label>
+    <label class="row"><span>Eyes follow my finger</span><input id="setFollow" class="switch" type="checkbox"></label>
+    <label class="row"><span>Sleep after 90 seconds idle</span><input id="setSleep" class="switch" type="checkbox"></label>
+    <label class="row"><span>React when I shake the phone</span><input id="setMotion" class="switch" type="checkbox"></label>
+    <button id="resetBtn" class="ghost" type="button">Reset settings</button>
+  </section>
+
+  <section>
+    <h2>Voice</h2>
+    <p class="hint" id="voiceHint"></p>
+    <label class="row"><span>Speak replies aloud</span><input id="setSpeak" class="switch" type="checkbox"></label>
+    <label class="row"><span>Voice</span><select id="setVoice" class="field"></select></label>
+    <label class="row"><span>Speed</span><input id="setRate" type="range" min="70" max="130" step="5"></label>
+    <button id="testVoice" class="ghost" type="button">Hear a sample</button>
+  </section>
+
+  <section>
+    <h2>AI brain</h2>
+    <p class="hint">Connects to a llama.cpp server running on this phone. Not tested yet. See the README.</p>
+    <label class="row"><span>Use local model</span><input id="setAi" class="switch" type="checkbox"></label>
+    <label class="row"><span>Address</span><input id="setEndpoint" class="field" type="url" inputmode="url" autocapitalize="off" spellcheck="false"></label>
+    <button id="testAi" class="ghost" type="button">Test connection</button>
+    <p id="aiResult" class="hint" aria-live="polite"></p>
+  </section>
+
+  <section>
+    <h2>Memory</h2>
+    <ul id="memList" class="mem"></ul>
+    <form id="memForm" class="memform" autocomplete="off">
+      <input id="memInput" class="field" placeholder="Add something to remember" maxlength="300" aria-label="New memory">
+      <button class="ghost" type="submit">Add</button>
+    </form>
+    <button id="wipeBtn" class="ghost" type="button">Delete all memory and chat history</button>
+  </section>
+
+  <section>
+    <h2>What works</h2>
+    <ul id="status" class="status"></ul>
+  </section>
+</aside>
+
+<script type="module" src="main.js"></script>
+</body>
+</html>
